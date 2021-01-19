@@ -33,7 +33,7 @@ def solve(a, b, m):
     out = []
     d = gcd(a, m)
     if b%d != 0:
-        return None
+        return  None
     part = m // d
     mb_rev = reverse(a, part)
     if mb_rev == None:
