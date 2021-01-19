@@ -32,15 +32,13 @@ def reverse(x,m):
 def solve(a, b, m):
     out = []
     d = gcd(a, m)
-    if m%d != 0:
-        return None
+    if b%d != 0:
+        return 0
     part = m // d
     mb_rev = reverse(a, part)
-
     if mb_rev == None:
         return None
-    rev =(mb_rev*b)%part
-    
+    rev = (mb_rev*b)%part
     for i in range(d):
         out.append(rev+(i*part))
     return out
